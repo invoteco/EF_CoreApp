@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@*@inject SignInManager<AppUser> SignInManager*@
+@*@inject UserManager<AppUser> UserManager*@
+@*@inject RoleManager<AppRole> RoleManager*@
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<a asp-page="/Posts/Create">Add new Post</a>
+
+@*@if (SignInManager.IsSignedIn(User))
+    {
+        //Только пользователь, которому присвоена роль Admin, может видеть эту ссылку
+        @if (User.IsInRole("Admin"))
+        {
+            <a asp-page="/Categories/Manage">Manage Categories</a>
+        }
+    }*@
+<a asp-page="/Categories/Manage">Manage Categories</a>
