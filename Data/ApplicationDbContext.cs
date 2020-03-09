@@ -13,8 +13,8 @@ namespace EF_CoreApp.Data
 
         public DbSet<Post> Posts { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<PostsToUser> PostsToUserAssigment { get; set; }
-        public DbSet<PostsToCategory> PostsToCategoryAssigment { get; set; }
+        public DbSet<PostsToUser> PostsToUser { get; set; }
+        public DbSet<PostsToCategory> PostsToCategory { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
